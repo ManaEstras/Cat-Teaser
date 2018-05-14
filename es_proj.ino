@@ -173,7 +173,7 @@ void main_loop(){
   int diff = (xx - xx_p) * (xx - xx_p) + (yy - yy_p) * (yy - yy_p) + (zz- zz_p) * (zz - zz_p);
   Serial.println(diff);
 
-  if (!cat || diff > 1000){
+  if (!cat){
     Serial.println("Notification");
     Blynk.notify("Cat is near! Enter to tease him/her!");
   }
