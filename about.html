@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- Custom styles for this template -->
+    <link href="css/clean-blog.min.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">ECE 5413 Embeded Systems</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Intro&Design</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">Project</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="post.html">Security</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Sources</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead" style="background-image: url('img/project.png')">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="page-heading">
+              <h1>Implementation</h1>
+              <span class="subheading">And technical details</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>Here is the system components of initial design at early stage. </p>
+           <a href="#">
+                  <img class="img-fluid" src="img/sch1.png" alt="">
+                </a>
+          <p>Here is a intuitive graph we had in plan of how the system can integrate together:</p>
+                <a href="#">
+                  <img class="img-fluid" src="img/system.png" alt="">
+                </a>
+          <p>And here is an update of what the system components are:</p>
+          <a href="#">
+                  <img class="img-fluid" src="img/system2.png" alt="">
+                </a>
+          <p>Then, here are the details about the components and software details. For software, we used Arduino with C language, Blynk IoT Platform</p>
+               <hr>
+               <h2 class="post-title">
+                Components of the project
+              </h2>
+            <a href="#">
+                  <img class="img-fluid" src="img/hardware.png" alt="">
+            </a>
+              <hr>
+                <h3 class="post-subtitle">Components:</h3> 
+             <p>
+              IR sensor :  emit infrared and detect its rebound, can detect the existence of cats in interested area. 
+            </p>
+              <p>
+            Gyroscope: detect movements and read (x,y,z), can detect motion of cats.
+              </p>
+              <p>
+            Arduino MKR1000 :microcontroller takes input from IR sensor, communicates through Wifi through private server, and connects to the Arduino UNO through digital pins.
+              </p>
+                <p>
+                Arduino UNO: microcontroller controls the movement of robotic arm, programmed to set movements and specific gestures, and connects to the Arduino MKR1000 through digital pins.
+                </p>
+              <p>
+              IP camera: Takes video and stream from local host then transmitted through RTSP. 
+              </p>
+              <p>Blynk user end, which will shoot alert if the sensors detect cats nearby:</p>
+                  <img class="img-fluid"  width="40%" height="40%" src="img/ui.png" alt="">
+            <p> The slide bar on the top allows the user to go Auto or Manual mode of running the robot, and the virtual joystick in the center can be used to control the direction of movement of the robot arm, and the link downbelaw is to connect to the server set from Andriod end, in application it takes input from remote camera and live stream as a feedback.</p>
+            <hr>
+            <h3 class="post-subtitle">Circuit Diagram of Project</h3> 
+                  <img class="img-fluid"  width="80%" height="80%" src="img/Embeded.png" alt="">
+            <p> As shown in picture above, here is the circuit diagram of how the electronics are integrated together, and the actual project control unit takes a space of 6inch x 6 inch x 5 inch, powered by a power bank.</p>
+
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a href="https://github.com/Ro5aline/Cat-Teaser">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+            </ul>
+            <p> Cornell University May 2018 </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/clean-blog.min.js"></script>
+
+  </body>
+
+</html>
+
